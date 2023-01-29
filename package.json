@@ -1,0 +1,16 @@
+{
+  "name": "lustack",
+  "version": "1.0.0",
+  "description": "沉淀、分享、成长",
+  "main": "index.js",
+  "repository": "https://gitee.com/ShowLuu/lustack.git",
+  "author": "showlu",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.9.8"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  }
+}
