@@ -20,7 +20,7 @@ git remote add origin https://gitee.com/ShowLuu/qeq1313.git
 git push -u origin master
 ```
 
-已有仓库?
+已有仓库
 
 ```shell
 cd existing_git_repo
@@ -30,3 +30,4 @@ git push -u origin master
 git remote add origin https://gitee.com/ShowLuu/lu-cloud.git
 git push -u origin develop
 ```
+
