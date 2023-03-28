@@ -49,7 +49,7 @@ module.exports = {
                 ]
             },
             {
-                text: '数据库1',
+                text: '数据库',
                 items: [
                     {text: 'elasticsearch', items: [{text: 'elk', link: '/dataprocessing/elasticsearch/Logstash.md'}, {text: '基础篇(一)', link: '/dataprocessing/elasticsearch/基础篇(一).md'}, {text: '基础篇(二)', link: '/dataprocessing/elasticsearch/基础篇(二).md'}, {text: '碎片篇(一)', link: '/dataprocessing/elasticsearch/碎片篇(一).md'}]},
                     {text: 'mongodb', items: [{text: 'ChangeStream.1', link: '/dataprocessing/mongodb/ChangeStareamDemo.md'}, {text: 'ChangeStream.2', link: '/dataprocessing/mongodb/MongodbChangeStareamDemo.md'}]}
@@ -58,8 +58,8 @@ module.exports = {
             {
                 text: '表单工作流',
                 items: [
-                    {text: '轻量级turbo', items: [{text: '推荐', link: '/formworkflow/turbo/README.md'}]},
-                    {text: 'flowable', items: [{text: '芋道源码', link: '/formworkflow/yudao/README.md'}]}
+                    {text: '轻量级turbo', items: [{text: '推荐', link: '/formworkflow/turbo/think.md'}]},
+                    {text: 'flowable', items: [{text: '芋道源码', link: '/formworkflow/yudao/think.md'}]}
                 ]
             }
         ],

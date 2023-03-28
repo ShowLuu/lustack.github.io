@@ -13,8 +13,8 @@ git config --global user.email "1309617271@qq.com"
 mkdir qeq1313
 cd qeq1313
 git init
-touch README.md
-git add README.md
+touch think.md
+git add think.md
 git commit -m "first commit"
 git remote add origin https://gitee.com/ShowLuu/qeq1313.git
 git push -u origin master
