@@ -1,5 +1,6 @@
 module.exports = {
     base: '/lustack.github.io/',
+    lang: 'zh-CN',
     title: 'lustack 知识星球',
     description: '沉淀、分享、成长',
     configureWebpack: {
@@ -17,6 +18,7 @@ module.exports = {
         authorAvatar: '/img/head.png',
         lastUpdated: '更新时间', // string | boolean
         author: 'ShowLu',
+        sidebarDepth: 6,
         nav: [
             {
                 text: '项目管理',
@@ -51,7 +53,7 @@ module.exports = {
             {
                 text: '数据库',
                 items: [
-                    {text: 'elasticsearch', items: [{text: 'elk', link: '/dataprocessing/elasticsearch/Logstash.md'}, {text: '基础篇(一)', link: '/dataprocessing/elasticsearch/基础篇(一).md'}, {text: '基础篇(二)', link: '/dataprocessing/elasticsearch/基础篇(二).md'}, {text: '碎片篇(一)', link: '/dataprocessing/elasticsearch/碎片篇(一).md'}]},
+                    {text: 'elasticsearch', items: [{text: 'elk', link: '/dataprocessing/elasticsearch/Logstash.md'}, {text: '基础篇(一)', link: '/dataprocessing/elasticsearch/base01.md'}, {text: '基础篇(二)', link: '/dataprocessing/elasticsearch/base02.md'}, {text: '碎片篇(一)', link: '/dataprocessing/elasticsearch/skill01.md'}]},
                     {text: 'mongodb', items: [{text: 'ChangeStream.1', link: '/dataprocessing/mongodb/ChangeStareamDemo.md'}, {text: 'ChangeStream.2', link: '/dataprocessing/mongodb/MongodbChangeStareamDemo.md'}]}
                 ]
             },
@@ -65,16 +67,12 @@ module.exports = {
         ],
         // 自动形成侧边导航
         sidebar: 'auto',
-        markdown: {
-            lineNumbers: true
-        },
         // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
         // repo: 'https://github.com/ShowLuu/lustack.github.io',
         repo: 'https://gitee.com/Showluu',
         // 自定义仓库链接文字。默认从 `themeConfig.repo` 中自动推断为
         // "GitHub"/"GitLab"/"Bitbucket" 其中之一，或是 "Source"。
         repoLabel: '源码仓库',
-
         // 以下为可选的编辑链接选项
 
         // 假如你的文档仓库和项目本身不在一个仓库：
@@ -87,6 +85,18 @@ module.exports = {
         editLinks: false,
         // 默认为 "Edit this page"
         editLinkText: '帮助我们改善此页面！'
+    },
+    markdown: {
+        lineNumbers: true,
+        anchor: {
+            level: [1, 2, 3, 4, 5, 6],
+        },
+        toc: {
+            level: [1, 2, 3, 4, 5, 6],
+        },
+        headers: {
+            level: [1, 2, 3, 4, 5, 6],
+        },
     }
 }
 
