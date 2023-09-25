@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>简易的命令行入门教程 | lustack 知识星球</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    
+    <meta name="description" content="沉淀、分享、成长">
+    
+    <link rel="preload" href="/lustack.github.io/assets/css/0.styles.cd78999c.css" as="style"><link rel="preload" href="/lustack.github.io/assets/js/app.66f88025.js" as="script"><link rel="preload" href="/lustack.github.io/assets/js/2.be206077.js" as="script"><link rel="preload" href="/lustack.github.io/assets/js/23.dbc1e4be.js" as="script"><link rel="prefetch" href="/lustack.github.io/assets/js/10.10d7d04b.js"><link rel="prefetch" href="/lustack.github.io/assets/js/11.487a6640.js"><link rel="prefetch" href="/lustack.github.io/assets/js/12.8d03ef92.js"><link rel="prefetch" href="/lustack.github.io/assets/js/13.1cade734.js"><link rel="prefetch" href="/lustack.github.io/assets/js/14.e452857b.js"><link rel="prefetch" href="/lustack.github.io/assets/js/15.30ecd203.js"><link rel="prefetch" href="/lustack.github.io/assets/js/16.8d1be629.js"><link rel="prefetch" href="/lustack.github.io/assets/js/17.f0cb870f.js"><link rel="prefetch" href="/lustack.github.io/assets/js/18.cf840a09.js"><link rel="prefetch" href="/lustack.github.io/assets/js/19.cd52d169.js"><link rel="prefetch" href="/lustack.github.io/assets/js/20.987b23a0.js"><link rel="prefetch" href="/lustack.github.io/assets/js/21.390f06a0.js"><link rel="prefetch" href="/lustack.github.io/assets/js/22.a8716fe4.js"><link rel="prefetch" href="/lustack.github.io/assets/js/3.6b3e1575.js"><link rel="prefetch" href="/lustack.github.io/assets/js/4.032b12d5.js"><link rel="prefetch" href="/lustack.github.io/assets/js/5.9d5a42da.js"><link rel="prefetch" href="/lustack.github.io/assets/js/6.fe70bd28.js"><link rel="prefetch" href="/lustack.github.io/assets/js/7.0a429ad2.js"><link rel="prefetch" href="/lustack.github.io/assets/js/8.ba983ee5.js"><link rel="prefetch" href="/lustack.github.io/assets/js/9.7bc7b9b9.js">
+    <link rel="stylesheet" href="/lustack.github.io/assets/css/0.styles.cd78999c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/lustack.github.io/" class="home-link router-link-active"><img src="/lustack.github.io/assets/img/logo.jpg" alt="lustack 知识星球" class="logo"> <span class="site-name can-hide">lustack 知识星球</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="项目管理" class="dropdown-title"><span class="title">项目管理</span> <span class="arrow down"></span></button> <button type="button" aria-label="项目管理" class="mobile-dropdown-title"><span class="title">项目管理</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          版本控制工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/pm/git/Gitee.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Git第一章
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="操作系统" class="dropdown-title"><span class="title">操作系统</span> <span class="arrow down"></span></button> <button type="button" aria-label="操作系统" class="mobile-dropdown-title"><span class="title">操作系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Linux基本操作
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/opsystem/linux/01/01.html" class="nav-link">
+  第一章
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/opsystem/linux/02.html" class="nav-link">
+  第二章
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/opsystem/linux/shell/01.html" class="nav-link">
+  第三章
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Netty" class="dropdown-title"><span class="title">Netty</span> <span class="arrow down"></span></button> <button type="button" aria-label="Netty" class="mobile-dropdown-title"><span class="title">Netty</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/lustack.github.io/netty/Netty学习笔记.html" class="nav-link">
+  基础篇(一)
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java基础" class="dropdown-title"><span class="title">Java基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java基础" class="mobile-dropdown-title"><span class="title">Java基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          设计模式
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/java/设计模式/重学设计模式.html" class="nav-link">
+  重学设计模式
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="消息队列" class="dropdown-title"><span class="title">消息队列</span> <span class="arrow down"></span></button> <button type="button" aria-label="消息队列" class="mobile-dropdown-title"><span class="title">消息队列</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          kafka
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/messagequeue/kafka/基础学习篇/基础学习篇.html" class="nav-link">
+  基础篇
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/messagequeue/kafka/基础学习篇/深入理解kafka核心设计与实践原理.html" class="nav-link">
+  深入理解kafka核心设计与实践原理
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          elasticsearch
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/elasticsearch/Logstash.html" class="nav-link">
+  elk
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/elasticsearch/base01.html" class="nav-link">
+  基础篇(一)
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html" class="nav-link">
+  基础篇(二)
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/elasticsearch/skill01.html" class="nav-link">
+  碎片篇(一)
+</a></li></ul></li><li class="dropdown-item"><h4>
+          mongodb
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/mongodb/ChangeStareamDemo.html" class="nav-link">
+  ChangeStream.1
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/mongodb/MongodbChangeStareamDemo.html" class="nav-link">
+  ChangeStream.2
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="表单工作流" class="dropdown-title"><span class="title">表单工作流</span> <span class="arrow down"></span></button> <button type="button" aria-label="表单工作流" class="mobile-dropdown-title"><span class="title">表单工作流</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          轻量级turbo
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/formworkflow/turbo/think.html" class="nav-link">
+  推荐
+</a></li></ul></li><li class="dropdown-item"><h4>
+          flowable
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/formworkflow/yudao/think.html" class="nav-link">
+  芋道源码
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/ShowLuu/lu-stack-maven-repository" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  组件私服
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://gitee.com/Showluu" target="_blank" rel="noopener noreferrer" class="repo-link">
+    源码仓库
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="项目管理" class="dropdown-title"><span class="title">项目管理</span> <span class="arrow down"></span></button> <button type="button" aria-label="项目管理" class="mobile-dropdown-title"><span class="title">项目管理</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          版本控制工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/pm/git/Gitee.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Git第一章
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="操作系统" class="dropdown-title"><span class="title">操作系统</span> <span class="arrow down"></span></button> <button type="button" aria-label="操作系统" class="mobile-dropdown-title"><span class="title">操作系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Linux基本操作
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/opsystem/linux/01/01.html" class="nav-link">
+  第一章
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/opsystem/linux/02.html" class="nav-link">
+  第二章
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/opsystem/linux/shell/01.html" class="nav-link">
+  第三章
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Netty" class="dropdown-title"><span class="title">Netty</span> <span class="arrow down"></span></button> <button type="button" aria-label="Netty" class="mobile-dropdown-title"><span class="title">Netty</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/lustack.github.io/netty/Netty学习笔记.html" class="nav-link">
+  基础篇(一)
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java基础" class="dropdown-title"><span class="title">Java基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java基础" class="mobile-dropdown-title"><span class="title">Java基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          设计模式
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/java/设计模式/重学设计模式.html" class="nav-link">
+  重学设计模式
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="消息队列" class="dropdown-title"><span class="title">消息队列</span> <span class="arrow down"></span></button> <button type="button" aria-label="消息队列" class="mobile-dropdown-title"><span class="title">消息队列</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          kafka
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/messagequeue/kafka/基础学习篇/基础学习篇.html" class="nav-link">
+  基础篇
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/messagequeue/kafka/基础学习篇/深入理解kafka核心设计与实践原理.html" class="nav-link">
+  深入理解kafka核心设计与实践原理
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          elasticsearch
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/elasticsearch/Logstash.html" class="nav-link">
+  elk
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/elasticsearch/base01.html" class="nav-link">
+  基础篇(一)
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html" class="nav-link">
+  基础篇(二)
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/elasticsearch/skill01.html" class="nav-link">
+  碎片篇(一)
+</a></li></ul></li><li class="dropdown-item"><h4>
+          mongodb
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/mongodb/ChangeStareamDemo.html" class="nav-link">
+  ChangeStream.1
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/mongodb/MongodbChangeStareamDemo.html" class="nav-link">
+  ChangeStream.2
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="表单工作流" class="dropdown-title"><span class="title">表单工作流</span> <span class="arrow down"></span></button> <button type="button" aria-label="表单工作流" class="mobile-dropdown-title"><span class="title">表单工作流</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          轻量级turbo
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/formworkflow/turbo/think.html" class="nav-link">
+  推荐
+</a></li></ul></li><li class="dropdown-item"><h4>
+          flowable
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/formworkflow/yudao/think.html" class="nav-link">
+  芋道源码
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/ShowLuu/lu-stack-maven-repository" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  组件私服
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://gitee.com/Showluu" target="_blank" rel="noopener noreferrer" class="repo-link">
+    源码仓库
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>简易的命令行入门教程</span> <!----></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h4 id="简易的命令行入门教程"><a href="#简易的命令行入门教程" class="header-anchor">#</a> 简易的命令行入门教程</h4> <p>Git 全局设置:</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token function">git</span> config <span class="token parameter variable">--global</span> user.name <span class="token string">&quot;张卢&quot;</span>
+<span class="token function">git</span> config <span class="token parameter variable">--global</span> user.email <span class="token string">&quot;1309617271@qq.com&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>创建 git 仓库:</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token function">mkdir</span> qeq1313
+<span class="token builtin class-name">cd</span> qeq1313
+<span class="token function">git</span> init
+<span class="token function">touch</span> think.md
+<span class="token function">git</span> <span class="token function">add</span> think.md
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">&quot;first commit&quot;</span>
+<span class="token function">git</span> remote <span class="token function">add</span> origin https://gitee.com/ShowLuu/qeq1313.git
+<span class="token function">git</span> push <span class="token parameter variable">-u</span> origin master
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>已有仓库</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token builtin class-name">cd</span> existing_git_repo
+<span class="token function">git</span> remote <span class="token function">add</span> origin https://gitee.com/ShowLuu/qeq1313.git
+<span class="token function">git</span> push <span class="token parameter variable">-u</span> origin master
+
+<span class="token function">git</span> remote <span class="token function">add</span> origin https://gitee.com/ShowLuu/lu-cloud.git
+<span class="token function">git</span> push <span class="token parameter variable">-u</span> origin develop
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">9/21/2023, 7:24:27 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/lustack.github.io/assets/js/app.66f88025.js" defer></script><script src="/lustack.github.io/assets/js/2.be206077.js" defer></script><script src="/lustack.github.io/assets/js/23.dbc1e4be.js" defer></script>
+  </body>
+</html>

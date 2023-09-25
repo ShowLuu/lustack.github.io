@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>一、基本操作原理 | lustack 知识星球</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    
+    <meta name="description" content="沉淀、分享、成长">
+    
+    <link rel="preload" href="/lustack.github.io/assets/css/0.styles.cd78999c.css" as="style"><link rel="preload" href="/lustack.github.io/assets/js/app.66f88025.js" as="script"><link rel="preload" href="/lustack.github.io/assets/js/2.be206077.js" as="script"><link rel="preload" href="/lustack.github.io/assets/js/6.fe70bd28.js" as="script"><link rel="prefetch" href="/lustack.github.io/assets/js/10.10d7d04b.js"><link rel="prefetch" href="/lustack.github.io/assets/js/11.487a6640.js"><link rel="prefetch" href="/lustack.github.io/assets/js/12.8d03ef92.js"><link rel="prefetch" href="/lustack.github.io/assets/js/13.1cade734.js"><link rel="prefetch" href="/lustack.github.io/assets/js/14.e452857b.js"><link rel="prefetch" href="/lustack.github.io/assets/js/15.30ecd203.js"><link rel="prefetch" href="/lustack.github.io/assets/js/16.8d1be629.js"><link rel="prefetch" href="/lustack.github.io/assets/js/17.f0cb870f.js"><link rel="prefetch" href="/lustack.github.io/assets/js/18.cf840a09.js"><link rel="prefetch" href="/lustack.github.io/assets/js/19.cd52d169.js"><link rel="prefetch" href="/lustack.github.io/assets/js/20.987b23a0.js"><link rel="prefetch" href="/lustack.github.io/assets/js/21.390f06a0.js"><link rel="prefetch" href="/lustack.github.io/assets/js/22.a8716fe4.js"><link rel="prefetch" href="/lustack.github.io/assets/js/23.dbc1e4be.js"><link rel="prefetch" href="/lustack.github.io/assets/js/3.6b3e1575.js"><link rel="prefetch" href="/lustack.github.io/assets/js/4.032b12d5.js"><link rel="prefetch" href="/lustack.github.io/assets/js/5.9d5a42da.js"><link rel="prefetch" href="/lustack.github.io/assets/js/7.0a429ad2.js"><link rel="prefetch" href="/lustack.github.io/assets/js/8.ba983ee5.js"><link rel="prefetch" href="/lustack.github.io/assets/js/9.7bc7b9b9.js">
+    <link rel="stylesheet" href="/lustack.github.io/assets/css/0.styles.cd78999c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/lustack.github.io/" class="home-link router-link-active"><img src="/lustack.github.io/assets/img/logo.jpg" alt="lustack 知识星球" class="logo"> <span class="site-name can-hide">lustack 知识星球</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="项目管理" class="dropdown-title"><span class="title">项目管理</span> <span class="arrow down"></span></button> <button type="button" aria-label="项目管理" class="mobile-dropdown-title"><span class="title">项目管理</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          版本控制工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/pm/git/Gitee.html" class="nav-link">
+  Git第一章
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="操作系统" class="dropdown-title"><span class="title">操作系统</span> <span class="arrow down"></span></button> <button type="button" aria-label="操作系统" class="mobile-dropdown-title"><span class="title">操作系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Linux基本操作
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/opsystem/linux/01/01.html" class="nav-link">
+  第一章
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/opsystem/linux/02.html" class="nav-link">
+  第二章
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/opsystem/linux/shell/01.html" class="nav-link">
+  第三章
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Netty" class="dropdown-title"><span class="title">Netty</span> <span class="arrow down"></span></button> <button type="button" aria-label="Netty" class="mobile-dropdown-title"><span class="title">Netty</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/lustack.github.io/netty/Netty学习笔记.html" class="nav-link">
+  基础篇(一)
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java基础" class="dropdown-title"><span class="title">Java基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java基础" class="mobile-dropdown-title"><span class="title">Java基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          设计模式
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/java/设计模式/重学设计模式.html" class="nav-link">
+  重学设计模式
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="消息队列" class="dropdown-title"><span class="title">消息队列</span> <span class="arrow down"></span></button> <button type="button" aria-label="消息队列" class="mobile-dropdown-title"><span class="title">消息队列</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          kafka
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/messagequeue/kafka/基础学习篇/基础学习篇.html" class="nav-link">
+  基础篇
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/messagequeue/kafka/基础学习篇/深入理解kafka核心设计与实践原理.html" class="nav-link">
+  深入理解kafka核心设计与实践原理
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          elasticsearch
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/elasticsearch/Logstash.html" class="nav-link">
+  elk
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/elasticsearch/base01.html" class="nav-link">
+  基础篇(一)
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  基础篇(二)
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/elasticsearch/skill01.html" class="nav-link">
+  碎片篇(一)
+</a></li></ul></li><li class="dropdown-item"><h4>
+          mongodb
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/mongodb/ChangeStareamDemo.html" class="nav-link">
+  ChangeStream.1
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/mongodb/MongodbChangeStareamDemo.html" class="nav-link">
+  ChangeStream.2
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="表单工作流" class="dropdown-title"><span class="title">表单工作流</span> <span class="arrow down"></span></button> <button type="button" aria-label="表单工作流" class="mobile-dropdown-title"><span class="title">表单工作流</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          轻量级turbo
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/formworkflow/turbo/think.html" class="nav-link">
+  推荐
+</a></li></ul></li><li class="dropdown-item"><h4>
+          flowable
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/formworkflow/yudao/think.html" class="nav-link">
+  芋道源码
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/ShowLuu/lu-stack-maven-repository" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  组件私服
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://gitee.com/Showluu" target="_blank" rel="noopener noreferrer" class="repo-link">
+    源码仓库
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="项目管理" class="dropdown-title"><span class="title">项目管理</span> <span class="arrow down"></span></button> <button type="button" aria-label="项目管理" class="mobile-dropdown-title"><span class="title">项目管理</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          版本控制工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/pm/git/Gitee.html" class="nav-link">
+  Git第一章
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="操作系统" class="dropdown-title"><span class="title">操作系统</span> <span class="arrow down"></span></button> <button type="button" aria-label="操作系统" class="mobile-dropdown-title"><span class="title">操作系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Linux基本操作
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/opsystem/linux/01/01.html" class="nav-link">
+  第一章
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/opsystem/linux/02.html" class="nav-link">
+  第二章
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/opsystem/linux/shell/01.html" class="nav-link">
+  第三章
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Netty" class="dropdown-title"><span class="title">Netty</span> <span class="arrow down"></span></button> <button type="button" aria-label="Netty" class="mobile-dropdown-title"><span class="title">Netty</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/lustack.github.io/netty/Netty学习笔记.html" class="nav-link">
+  基础篇(一)
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java基础" class="dropdown-title"><span class="title">Java基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java基础" class="mobile-dropdown-title"><span class="title">Java基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          设计模式
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/java/设计模式/重学设计模式.html" class="nav-link">
+  重学设计模式
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="消息队列" class="dropdown-title"><span class="title">消息队列</span> <span class="arrow down"></span></button> <button type="button" aria-label="消息队列" class="mobile-dropdown-title"><span class="title">消息队列</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          kafka
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/messagequeue/kafka/基础学习篇/基础学习篇.html" class="nav-link">
+  基础篇
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/messagequeue/kafka/基础学习篇/深入理解kafka核心设计与实践原理.html" class="nav-link">
+  深入理解kafka核心设计与实践原理
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          elasticsearch
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/elasticsearch/Logstash.html" class="nav-link">
+  elk
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/elasticsearch/base01.html" class="nav-link">
+  基础篇(一)
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  基础篇(二)
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/elasticsearch/skill01.html" class="nav-link">
+  碎片篇(一)
+</a></li></ul></li><li class="dropdown-item"><h4>
+          mongodb
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/mongodb/ChangeStareamDemo.html" class="nav-link">
+  ChangeStream.1
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/mongodb/MongodbChangeStareamDemo.html" class="nav-link">
+  ChangeStream.2
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="表单工作流" class="dropdown-title"><span class="title">表单工作流</span> <span class="arrow down"></span></button> <button type="button" aria-label="表单工作流" class="mobile-dropdown-title"><span class="title">表单工作流</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          轻量级turbo
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/formworkflow/turbo/think.html" class="nav-link">
+  推荐
+</a></li></ul></li><li class="dropdown-item"><h4>
+          flowable
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/formworkflow/yudao/think.html" class="nav-link">
+  芋道源码
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/ShowLuu/lu-stack-maven-repository" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  组件私服
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://gitee.com/Showluu" target="_blank" rel="noopener noreferrer" class="repo-link">
+    源码仓库
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>一、基本操作原理</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_1、路由原理" class="sidebar-link">1、路由原理</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_2、es写过程" class="sidebar-link">2、es写过程</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_3、es写一致性原理" class="sidebar-link">3、es写一致性原理</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_1、每次写-增删改-之前会判断shard活跃情况" class="sidebar-link">1、每次写(增删改)之前会判断shard活跃情况</a></li></ul></li><li><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_4、document查询原理" class="sidebar-link">4、document查询原理</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_1、概述" class="sidebar-link">1、概述</a></li><li class="sidebar-sub-header"><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_2、过程" class="sidebar-link">2、过程</a></li><li class="sidebar-sub-header"><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_3、分页查询deep-paging性能问题" class="sidebar-link">3、分页查询deep paging性能问题：</a></li></ul></li><li><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_5、document写入原理" class="sidebar-link">5、document写入原理</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_1、写入流程-演变1" class="sidebar-link">1、写入流程(演变1)</a></li><li class="sidebar-sub-header"><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_2、近实时-对1优化-演变2" class="sidebar-link">2、近实时(对1优化-演变2)</a></li><li class="sidebar-sub-header"><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_3、最终版本" class="sidebar-link">3、最终版本</a></li><li class="sidebar-sub-header"><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#" class="sidebar-link"></a></li><li class="sidebar-sub-header"><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_4、海量磁盘文件合并" class="sidebar-link">4、海量磁盘文件合并</a></li></ul></li><li><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_6、type基本原理" class="sidebar-link">6、type基本原理</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_1、type底层数据结构" class="sidebar-link">1、type底层数据结构</a></li></ul></li><li><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_1、分词器" class="sidebar-link">1、分词器</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_1、内置分词器" class="sidebar-link">1、内置分词器</a></li><li class="sidebar-sub-header"><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_2、测试分词情况" class="sidebar-link">2、测试分词情况</a></li><li class="sidebar-sub-header"><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_3、定义分词器" class="sidebar-link">3、定义分词器</a></li></ul></li><li><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_2、mapping" class="sidebar-link">2、mapping</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_1、查看mapping" class="sidebar-link">1、查看mapping</a></li><li class="sidebar-sub-header"><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_2、数据类型" class="sidebar-link">2、数据类型</a></li><li class="sidebar-sub-header"><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_2、更新mapping" class="sidebar-link">2、更新mapping</a></li></ul></li><li><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_3、dsl查询" class="sidebar-link">3、DSL查询</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_4、相关度分析" class="sidebar-link">4、相关度分析</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_1、相关度评分" class="sidebar-link">1、相关度评分</a></li></ul></li><li><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_5、doc-value" class="sidebar-link">5、doc-value</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_1、索引" class="sidebar-link">1、索引</a></li></ul></li><li><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_6、scroll-滚动搜索" class="sidebar-link">6、scroll 滚动搜索</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_7、索引维护" class="sidebar-link">7、索引维护</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_1、创建索引" class="sidebar-link">1、创建索引</a></li><li class="sidebar-sub-header"><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_2、修改" class="sidebar-link">2、修改</a></li><li class="sidebar-sub-header"><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_3、删除" class="sidebar-link">3、删除</a></li></ul></li><li><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_8、应用零停机-重建索引" class="sidebar-link">8、应用零停机，重建索引</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_1、为什么要重建索引" class="sidebar-link">1、为什么要重建索引？</a></li><li class="sidebar-sub-header"><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_2、是什么引起-需要重建索引" class="sidebar-link">2、是什么引起，需要重建索引</a></li><li class="sidebar-sub-header"><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_3、如何解决-实现应用的零停机" class="sidebar-link">3、如何解决？实现应用的零停机？</a></li></ul></li><li><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html#_1、bouncing-results" class="sidebar-link">1、bouncing results</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="一、基本操作原理"><a href="#一、基本操作原理" class="header-anchor">#</a> 一、基本操作原理</h1> <h2 id="_1、路由原理"><a href="#_1、路由原理" class="header-anchor">#</a> 1、路由原理</h2> <ol><li><p>每次增删改查一个document的时候，都会带过来一个routing值，默认就是这个document的_id(可能是手动指定也可能是自动生成)</p> <ul><li><p>每次把这个routing值先进行hash，产出一个hash值</p></li> <li><p>然后将这个hash值取模，hash / primary shard数量</p></li> <li><p>结果就决定了，document在哪个node上处理</p></li> <li><p>es保证，取模计算结果，结果一定是在0~number_of_primary_shards-1之间这个范围内的</p></li></ul></li></ol> <h2 id="_2、es写过程"><a href="#_2、es写过程" class="header-anchor">#</a> 2、es写过程</h2> <ol><li><p>对于写请求，es会选择一个node发送请求过去，这个node就是协调节点</p></li> <li><p>协调节点对document进行路由，将请求转发给对应的node(有primary shard)</p></li> <li><p>实际上是在primary shard上处理请求，然后将数据在同步到replica node</p></li> <li><p>协调节点，如果发现primary node和所有的replica node都搞定之后，会将结果返回给客户端</p></li></ol> <h2 id="_3、es写一致性原理"><a href="#_3、es写一致性原理" class="header-anchor">#</a> 3、es写一致性原理</h2> <h3 id="_1、每次写-增删改-之前会判断shard活跃情况"><a href="#_1、每次写-增删改-之前会判断shard活跃情况" class="header-anchor">#</a> 1、每次写(增删改)之前会判断shard活跃情况</h3> <ul><li><p>one</p></li> <li><p>all</p></li> <li><p>quorum, 所有shard大部分时活跃的</p> <ul><li><p>(primary + replicas) / 2 + 1，当replicas &gt; 1时才生效</p></li> <li><p>为什么es采用这种机制 当replicas &gt; 1时才生效：</p> <ul><li>1p1r，quorum=2，若1台服务器，由于相同的shard与realicas不能分配在同一台服务器上，所以此时的shard活跃数是1，写无法进行，es为了避免这种情况的发生</li></ul></li> <li><p>3p,1r 分析：</p> <ul><li><p>quorum=3 ，理论上：p0r2,p1r0,p2r1</p></li> <li><p>若2服务器</p> <p>p0r2,p1r0 ok没问题；p0r2,p2r1 活跃数2，写无法执行</p></li> <li><p>若3台服务器，没问题</p></li></ul></li></ul></li></ul> <h2 id="_4、document查询原理"><a href="#_4、document查询原理" class="header-anchor">#</a> 4、document查询原理</h2> <h3 id="_1、概述"><a href="#_1、概述" class="header-anchor">#</a> 1、概述</h3> <p>对于读请求，不一定转发到primary shard 也可以转发到replica shard处理</p> <h3 id="_2、过程"><a href="#_2、过程" class="header-anchor">#</a> 2、过程</h3> <ol><li>客户端发送请求到任意一个node，成为协调节点</li> <li>协调节点对document进行路由(es保证，写、读的路由结果是一样的)，将请求转发到对应的node，此时会使用随机轮询算法，在primary shard以及其所有replica中随机选择一个，让读请求负载均衡</li> <li>接收请求的node返回document给协调节点</li> <li>协调节点返回document给客户端</li> <li>特殊情况：document如果还在建立索引过程中，可能只有primary shard有，任何一个replica shard都没有，此时可能会导致无法读取到document，但是document完成索引建立之后，primary shard和replica shard就都有了</li></ol> <h3 id="_3、分页查询deep-paging性能问题"><a href="#_3、分页查询deep-paging性能问题" class="header-anchor">#</a> 3、分页查询deep paging性能问题：</h3> <ol><li>在分布式场景下，多shard，数据是保存在各个shard中的，读的时候，会路由到各个shard，这个过程当然由协调节点负责，最后收集的数据会发送给客户端。</li> <li>想象一下，在分页的情况下，es是怎么查询的？</li> <li>假如有3000条数据，3shard，故每个shard由10000条数据，需求是，查询9990～10000区间的数据。</li> <li>实际上，es执行中，不可能只查询一个shard的9990-10000(因为数据是分片的)，所以他会获取每一个shard 9990-10000的数据，然后一起返回给协调节点(数据共计10000*3)，协调节点在排序，在选取其中9990-10000区间的数据</li> <li>综上，会有大量数据的在内存操作，影响性能</li></ol> <h2 id="_5、document写入原理"><a href="#_5、document写入原理" class="header-anchor">#</a> 5、document写入原理</h2> <h3 id="_1、写入流程-演变1"><a href="#_1、写入流程-演变1" class="header-anchor">#</a> 1、写入流程(演变1)</h3> <p><img src="/lustack.github.io/assets/img/documentcrud.e5704b07.png" alt=""></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>（1）数据写入buffer
+（2）commit point
+（3）buffer中的数据写入新的index segment
+（4）等待在os cache中的index segment被fsync强制刷到磁盘上
+（5）新的index sgement被打开，供search使用
+（6）buffer被清空
+
+每次commit point时，会有一个.del文件，标记了哪些segment中的哪些document被标记为deleted了
+搜索的时候，会依次查询所有的segment，从旧的到新的，比如被修改过的document，在旧的segment中，会标记为deleted，在新的segment中会有其新的数据
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h3 id="_2、近实时-对1优化-演变2"><a href="#_2、近实时-对1优化-演变2" class="header-anchor">#</a> 2、近实时(对1优化-演变2)</h3> <p>从写入到被查询到，只需要1s，</p> <p><img src="/lustack.github.io/assets/img/NRTwrite.6b9226f0.png" alt=""></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>写入流程别改进如下：磁盘IO，很耗时
+（1）数据写入buffer
+（2）每隔一定时间，buffer中的数据被写入segment文件，但是先写入os cache
+（3）只要segment写入os cache，那就直接打开供search使用，不立即执行commit
+
+数据写入os cache，并被打开供搜索的过程，叫做refresh，默认是每隔1秒refresh一次。也就是说，每隔一秒就会将buffer中的数据写入一个新的index segment file，先写入os cache中。所以，es是近实时的，数据写入到可以被搜索，默认是1秒。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token comment">//手动刷，没必要，es默认1s刷新buffer到内存一次</span>
+<span class="token constant">POST</span> <span class="token operator">/</span>my_index<span class="token operator">/</span>_refresh
+
+<span class="token comment">//对于实时性要求比较低时，可以适当延长刷新缓存间隔</span>
+<span class="token constant">PUT</span> <span class="token operator">/</span>my_index
+<span class="token punctuation">{</span>
+  <span class="token string-property property">&quot;settings&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">&quot;refresh_interval&quot;</span><span class="token operator">:</span> <span class="token string">&quot;30s&quot;</span> 
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h3 id="_3、最终版本"><a href="#_3、最终版本" class="header-anchor">#</a> 3、最终版本</h3> <p><img src="/lustack.github.io/assets/img/Ultimateversion.e19a4cf7.png" alt=""></p> <p>![](./images/commit point+translog.png)</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>再次优化的写入流程
+
+（1）数据写入buffer缓冲和translog日志文件
+（2）每隔一秒钟，buffer中的数据被写入新的segment file，并进入os cache，此时segment被打开并供search使用
+（3）buffer被清空
+（4）重复1~3，新的segment不断添加，buffer不断被清空，而translog中的数据不断累加
+（5）当translog长度达到一定程度的时候，commit操作发生
+  （5-1）buffer中的所有数据写入一个新的segment，并写入os cache，打开供使用
+  （5-2）buffer被清空
+  （5-3）一个commit ponit被写入磁盘，标明了所有的index segment
+  （5-4）filesystem cache中的所有index segment file缓存数据，被fsync强行刷到磁盘上
+  （5-5）现有的translog被清空，创建一个新的translog
+
+基于translog和commit point，如何进行数据恢复
+
+fsync+清空translog，就是flush，默认每隔30分钟flush一次，或者当translog过大的时候，也会flush
+
+POST /my_index/_flush，一般来说别手动flush，让它自动执行就可以了
+
+translog，每隔5秒被fsync一次到磁盘上。在一次增删改操作之后，当fsync在primary shard和replica shard都成功之后，那次增删改操作才会成功
+
+但是这种在一次增删改时强行fsync translog可能会导致部分操作比较耗时，也可以允许部分数据丢失，设置异步fsync translog
+
+PUT /my_index/_settings
+{
+    &quot;index.translog.durability&quot;: &quot;async&quot;,
+    &quot;index.translog.sync_interval&quot;: &quot;5s&quot;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><h3 id=""><a href="#" class="header-anchor">#</a></h3> <h3 id="_4、海量磁盘文件合并"><a href="#_4、海量磁盘文件合并" class="header-anchor">#</a> 4、海量磁盘文件合并</h3> <h2 id="_6、type基本原理"><a href="#_6、type基本原理" class="header-anchor">#</a> 6、type基本原理</h2> <h3 id="_1、type底层数据结构"><a href="#_1、type底层数据结构" class="header-anchor">#</a> 1、type底层数据结构</h3> <ol><li><p>lucene 建立索引的时候，是没有type概念的，在document中，实际上会把type作为field添加到文档列中的，即_type字段，es通过type查询，实际上是通过 _type值来筛选过滤的</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token punctuation">{</span>
+    <span class="token string-property property">&quot;_index&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;mall&quot;</span><span class="token punctuation">,</span>
+    <span class="token string-property property">&quot;_type&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;product&quot;</span><span class="token punctuation">,</span>
+    <span class="token string-property property">&quot;_id&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;5&quot;</span><span class="token punctuation">,</span>
+    <span class="token string-property property">&quot;_score&quot;</span> <span class="token operator">:</span> <span class="token number">1.0</span><span class="token punctuation">,</span>
+    <span class="token string-property property">&quot;_source&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string-property property">&quot;name&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;mall05&quot;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div></li> <li><p>为什么不建议一个索引多type，或者说，多个type带来哪些问题</p> <ul><li>首先每次查询的元数据会比较大，因为多type，这个控制好的话，对于系统的影响可以控制</li> <li>由于是多个type，所以每个type的数据结构是不同的，放在同一个in dex下，搜索type会被揉到一起去，那么每条数据会有很多field都是空值，浪费资源，产生性能问题</li> <li>而且，如果多type，那么每个type的field在这个index下名称是唯一的，总之，想象一下es的存储方式，即可get到点</li> <li>综上，还是采用一个index一个type的方式较为稳定安全</li></ul></li></ol> <h1 id="二、应用"><a href="#二、应用" class="header-anchor">#</a> 二、应用</h1> <h2 id="_1、分词器"><a href="#_1、分词器" class="header-anchor">#</a> 1、分词器</h2> <h3 id="_1、内置分词器"><a href="#_1、内置分词器" class="header-anchor">#</a> 1、内置分词器</h3> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code>Set the shape to semi<span class="token operator">-</span>transparent by calling <span class="token function">set_trans</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
+
+standard analyzer：set<span class="token punctuation">,</span> the<span class="token punctuation">,</span> shape<span class="token punctuation">,</span> to<span class="token punctuation">,</span> semi<span class="token punctuation">,</span> transparent<span class="token punctuation">,</span> by<span class="token punctuation">,</span> calling<span class="token punctuation">,</span> set_trans<span class="token punctuation">,</span> <span class="token number">5</span>（默认的是standard）
+simple analyzer：set<span class="token punctuation">,</span> the<span class="token punctuation">,</span> shape<span class="token punctuation">,</span> to<span class="token punctuation">,</span> semi<span class="token punctuation">,</span> transparent<span class="token punctuation">,</span> by<span class="token punctuation">,</span> calling<span class="token punctuation">,</span> set<span class="token punctuation">,</span> trans
+whitespace analyzer：Set<span class="token punctuation">,</span> the<span class="token punctuation">,</span> shape<span class="token punctuation">,</span> to<span class="token punctuation">,</span> semi<span class="token operator">-</span>transparent<span class="token punctuation">,</span> by<span class="token punctuation">,</span> calling<span class="token punctuation">,</span> <span class="token function">set_trans</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
+language analyzer（特定的语言的分词器，比如说，english，英语分词器）：set<span class="token punctuation">,</span> shape<span class="token punctuation">,</span> semi<span class="token punctuation">,</span> transpar<span class="token punctuation">,</span> call<span class="token punctuation">,</span> set_tran<span class="token punctuation">,</span> <span class="token number">5</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="_2、测试分词情况"><a href="#_2、测试分词情况" class="header-anchor">#</a> 2、测试分词情况</h3> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token constant">GET</span> <span class="token operator">/</span>_analyze
+<span class="token punctuation">{</span>
+	<span class="token string-property property">&quot;analyzer&quot;</span><span class="token operator">:</span> <span class="token string">&quot;standard&quot;</span><span class="token punctuation">,</span>
+	<span class="token string-property property">&quot;text&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="_3、定义分词器"><a href="#_3、定义分词器" class="header-anchor">#</a> 3、定义分词器</h3> <ol><li><p>standard</p> <ul><li>standard tokenizer: 以单词边界进行切分</li> <li>standard token filter: 什么都不做</li> <li>lowercase token filter: 将所有字母转换为小写</li> <li>stop token filter(默认禁用): 起初停用词</li></ul></li> <li><p>修改索引的分词机制</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token comment">//设置标准的分词器，且 把过滤掉部分英文</span>
+<span class="token constant">PUT</span> <span class="token operator">/</span>my_index
+<span class="token punctuation">{</span>
+  <span class="token string-property property">&quot;settings&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">&quot;analysis&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string-property property">&quot;analyzer&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string-property property">&quot;es_std&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token string-property property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;standard&quot;</span><span class="token punctuation">,</span>
+          <span class="token string-property property">&quot;stopwords&quot;</span><span class="token operator">:</span> <span class="token string">&quot;_english_&quot;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//结果: a dog is in</span>
+<span class="token constant">GET</span> <span class="token operator">/</span>my_index<span class="token operator">/</span>_analyze
+<span class="token punctuation">{</span>
+  <span class="token string-property property">&quot;analyzer&quot;</span><span class="token operator">:</span> <span class="token string">&quot;standard&quot;</span><span class="token punctuation">,</span>
+  <span class="token string-property property">&quot;text&quot;</span><span class="token operator">:</span> <span class="token string">&quot;a dog is in&quot;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//结果: dog</span>
+<span class="token constant">GET</span> <span class="token operator">/</span>my_index<span class="token operator">/</span>_analyze
+<span class="token punctuation">{</span>
+  <span class="token string-property property">&quot;analyzer&quot;</span><span class="token operator">:</span> <span class="token string">&quot;es_std&quot;</span><span class="token punctuation">,</span>
+  <span class="token string-property property">&quot;text&quot;</span><span class="token operator">:</span> <span class="token string">&quot;a dog is in&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div></li> <li><p>定制化自己的分词器</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>//定制分词器
+PUT /my_index
+{
+  &quot;settings&quot;: {
+    &quot;analysis&quot;: {
+      &quot;char_filter&quot;: {
+        &quot;&amp;_to_and&quot;: {
+          &quot;type&quot;: &quot;mapping&quot;,
+          &quot;mappings&quot;: [&quot;&amp;=&gt;and&quot;]
+        }
+      },
+      &quot;filter&quot;: {
+        &quot;my_stopwords&quot;: {
+          &quot;type&quot;: &quot;stop&quot;,
+          &quot;stopwords&quot;: [&quot;the&quot;, &quot;a&quot;]
+        }
+      },
+      &quot;analyzer&quot;: {
+        &quot;my_analyzer&quot;: {
+          &quot;type&quot;: &quot;custom&quot;,
+          &quot;char_filter&quot;: [&quot;html_strip&quot;, &quot;&amp;_to_and&quot;],
+          &quot;tokenizer&quot;: &quot;standard&quot;,
+          &quot;filter&quot;: [&quot;lowercase&quot;, &quot;my_stopwords&quot;]
+        }
+      }
+    }
+  }
+}
+
+//结果: tomandjerry are friend in house haha
+GET /my_index/_analyze
+{
+  &quot;text&quot;: &quot;tom&amp;jerry are a friend in the house, &lt;a&gt;, HAHA!!&quot;,
+  &quot;analyzer&quot;: &quot;my_analyzer&quot;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br></div></div></li></ol> <h2 id="_2、mapping"><a href="#_2、mapping" class="header-anchor">#</a> 2、mapping</h2> <h3 id="_1、查看mapping"><a href="#_1、查看mapping" class="header-anchor">#</a> 1、查看mapping</h3> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token constant">GET</span> <span class="token operator">/</span>mall<span class="token operator">/</span>_mapping
+<span class="token constant">GET</span> <span class="token operator">/</span>mall<span class="token operator">/</span>_mapping<span class="token operator">/</span>test
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="_2、数据类型"><a href="#_2、数据类型" class="header-anchor">#</a> 2、数据类型</h3> <ol><li>基本类型
+<ul><li>string、text</li> <li>byte、short、integer、long</li> <li>float、double</li> <li>boolean</li> <li>date</li></ul></li> <li>动态解析(put不存在的的索引文档时数据会默认创建mapping)
+<ul><li>True、false -&gt; boolean</li> <li>123 -&gt; long</li> <li>123.456 -&gt; double</li> <li>2020-01-01 -&gt; date</li> <li>&quot;&quot; -&gt; string/text</li></ul></li></ol> <h3 id="_2、更新mapping"><a href="#_2、更新mapping" class="header-anchor">#</a> 2、更新mapping</h3> <h4 id="_1、分词影响"><a href="#_1、分词影响" class="header-anchor">#</a> 1、分词影响</h4> <ol><li><p>field 的 type 是 keyword 不会进行分词</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token comment">//添加字段content，类型为keyword</span>
+<span class="token constant">PUT</span> <span class="token operator">/</span>mall2<span class="token operator">/</span>_mapping<span class="token operator">/</span>test
+<span class="token punctuation">{</span>
+  <span class="token string-property property">&quot;properties&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string-property property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;keyword&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//测试分词</span>
+<span class="token constant">GET</span> mall2<span class="token operator">/</span>_analyze
+<span class="token punctuation">{</span>
+  <span class="token string-property property">&quot;field&quot;</span><span class="token operator">:</span> <span class="token string">&quot;content&quot;</span><span class="token punctuation">,</span>
+  <span class="token string-property property">&quot;text&quot;</span><span class="token operator">:</span> <span class="token string">&quot;my dogs&quot;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//结果 my dogs，没有分词</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div></li></ol> <h4 id="_2、更新"><a href="#_2、更新" class="header-anchor">#</a> 2、更新</h4> <p>不可以修改、删除已有的字段</p> <p>解决方案：建立新的索引，重新封装旧的索引数据，再导入到新的索引里</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token comment">//创建</span>
+<span class="token constant">PUT</span> <span class="token operator">/</span>mall2
+<span class="token punctuation">{</span>
+  <span class="token string-property property">&quot;mappings&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">&quot;test&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+      <span class="token string-property property">&quot;properties&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string-property property">&quot;lu_id&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token string-property property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;text&quot;</span><span class="token punctuation">,</span>
+          <span class="token string-property property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string-property property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token string-property property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;text&quot;</span><span class="token punctuation">,</span>
+          <span class="token string-property property">&quot;analyzer&quot;</span><span class="token operator">:</span> <span class="token string">&quot;english&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string-property property">&quot;date&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token string-property property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;date&quot;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//添加新的字段</span>
+<span class="token constant">PUT</span> <span class="token operator">/</span>mall2<span class="token operator">/</span>_mapping<span class="token operator">/</span>test
+<span class="token punctuation">{</span>
+  <span class="token string-property property">&quot;properties&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string-property property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;double&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br></div></div><ul><li>index，默认true，当设置false，该字段会被存储，在_source中会显示出该字段，但是不能被查询</li> <li>type，keyword 不分词</li></ul> <h2 id="_3、dsl查询"><a href="#_3、dsl查询" class="header-anchor">#</a> 3、DSL查询</h2> <h4 id="_1、bool"><a href="#_1、bool" class="header-anchor">#</a> 1、bool</h4> <p>must、must_not、should、filter</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token constant">GET</span> <span class="token operator">/</span>mall<span class="token operator">/</span>product<span class="token operator">/</span>_search
+<span class="token punctuation">{</span>
+  <span class="token string-property property">&quot;query&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">&quot;bool&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string-property property">&quot;must&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token string-property property">&quot;match&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token string-property property">&quot;producer&quot;</span><span class="token operator">:</span> <span class="token string">&quot;producer&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token string-property property">&quot;should&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token string-property property">&quot;match&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token string-property property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;special&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          <span class="token string-property property">&quot;match&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token string-property property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token number">50</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token string-property property">&quot;must_not&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token string-property property">&quot;match_phrase&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token string-property property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;special yagao&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br></div></div><h4 id="_2、filter与query"><a href="#_2、filter与query" class="header-anchor">#</a> 2、filter与query</h4> <ol><li><p>相关度对比解密</p> <ul><li><p>filter 只是过滤数据，不会计算相关度，不会排序，对相关度没有影响</p></li> <li><p>query 会计算每个document对于搜索条件的相关度，并按照相关度排序</p></li></ul> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token comment">//query查询，相关度_score=1.0</span>
+<span class="token constant">GET</span> <span class="token operator">/</span>mall<span class="token operator">/</span>product<span class="token operator">/</span>_search
+<span class="token punctuation">{</span>
+  <span class="token string-property property">&quot;query&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">&quot;range&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string-property property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string-property property">&quot;gte&quot;</span><span class="token operator">:</span> <span class="token number">30</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token constant">GET</span> <span class="token operator">/</span>mall<span class="token operator">/</span>product<span class="token operator">/</span>_search
+<span class="token punctuation">{</span>
+  <span class="token string-property property">&quot;query&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">&quot;constant_score&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string-property property">&quot;filter&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string-property property">&quot;range&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token string-property property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token string-property property">&quot;gte&quot;</span><span class="token operator">:</span> <span class="token number">30</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+<span class="token comment">//filter查询过了，相关度_score=0.0</span>
+<span class="token constant">GET</span> <span class="token operator">/</span>mall<span class="token operator">/</span>product<span class="token operator">/</span>_search
+<span class="token punctuation">{</span>
+  <span class="token string-property property">&quot;query&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">&quot;bool&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string-property property">&quot;filter&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string-property property">&quot;range&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token string-property property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token string-property property">&quot;gte&quot;</span><span class="token operator">:</span> <span class="token number">30</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br></div></div></li> <li><p>性能</p> <ul><li>filter不会计算相关度，不会排序，同时还有内置的自动cache最常使用filter的功能</li> <li>query，相反，无法cache结果</li></ul></li></ol> <h4 id="_3、query搜索语法"><a href="#_3、query搜索语法" class="header-anchor">#</a> 3、query搜索语法</h4> <ol><li><p>match_all，查询所有</p></li> <li><p>match，field</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token constant">GET</span> <span class="token operator">/</span>mall<span class="token operator">/</span>product<span class="token operator">/</span>_search
+<span class="token punctuation">{</span>
+  <span class="token string-property property">&quot;query&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">&quot;match&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string-property property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;lu&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div></li> <li><p>multi_match</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token constant">GET</span> <span class="token operator">/</span>mall<span class="token operator">/</span>product<span class="token operator">/</span>_search
+<span class="token punctuation">{</span>
+  <span class="token string-property property">&quot;query&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">&quot;multi_match&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string-property property">&quot;query&quot;</span><span class="token operator">:</span> <span class="token string">&quot;special&quot;</span><span class="token punctuation">,</span>
+      <span class="token string-property property">&quot;fields&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;name&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;producer&quot;</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div></li> <li><p>range query</p></li> <li><p>term query，精确匹配，不会分词</p></li> <li><p>terms query</p></li></ol> <h4 id="_4、排序"><a href="#_4、排序" class="header-anchor">#</a> 4、排序</h4> <ol><li><p>数值排序</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token constant">GET</span> <span class="token operator">/</span>mall<span class="token operator">/</span>product<span class="token operator">/</span>_search
+<span class="token punctuation">{</span>
+  <span class="token string-property property">&quot;sort&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token string-property property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string-property property">&quot;order&quot;</span><span class="token operator">:</span> <span class="token string">&quot;desc&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div></li> <li><p>字符串排序</p> <p>为了防止，排序的时候，字符串分词，而造成的排序问题，所以需要对字符串额外存储一个不分词的值，keyword表明该字段不会分词</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token constant">PUT</span> <span class="token operator">/</span>mall3
+<span class="token punctuation">{</span>
+   <span class="token string-property property">&quot;mappings&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+     <span class="token string-property property">&quot;test&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+       <span class="token string-property property">&quot;properties&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string-property property">&quot;desc2&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token string-property property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;text&quot;</span><span class="token punctuation">,</span>
+          <span class="token string-property property">&quot;fields&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token string-property property">&quot;raw&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+              <span class="token string-property property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;keyword&quot;</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token string-property property">&quot;fielddata&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+     <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token constant">GET</span> <span class="token operator">/</span>mall3<span class="token operator">/</span>test<span class="token operator">/</span>_search
+<span class="token punctuation">{</span>
+  <span class="token string-property property">&quot;query&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">&quot;match_all&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string-property property">&quot;sort&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token string-property property">&quot;desc2.raw&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string-property property">&quot;order&quot;</span><span class="token operator">:</span> <span class="token string">&quot;desc&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br></div></div></li></ol> <h2 id="_4、相关度分析"><a href="#_4、相关度分析" class="header-anchor">#</a> 4、相关度分析</h2> <h3 id="_1、相关度评分"><a href="#_1、相关度评分" class="header-anchor">#</a> 1、相关度评分</h3> <ol><li><p>Term frequency : 搜索文本中各个词条在field文本中出现了多少次，越多，相关度越高</p></li> <li><p>Inverse document frequency : 根据搜索请求的词条，查看这个词条在所有的document中，一共出现的次数，出现次数越多，相关度越弱</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>搜索请求: hello world
+
+doc1: hello, today is very good
+doc2: hi world, how are you
+
+index总数据1w，hello出现了1000次，world出现了100次，doc2更相关
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div></li> <li><p>Field-length norm : field越长，相关度越弱</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>搜索请求: hello world
+
+doc1: {&quot;title&quot;: &quot;hello article&quot;, &quot;content&quot;: &quot;asdfgh&quot;}
+doc2: {&quot;title&quot;: &quot;my article&quot;, &quot;content&quot;: &quot;asdfgh, world&quot;}
+
+hello、world在doc1、doc2出现的次数一样多，都是一次，但是，title字段比content要短，所以doc1相关度更高
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div></li></ol> <h2 id="_5、doc-value"><a href="#_5、doc-value" class="header-anchor">#</a> 5、doc-value</h2> <h3 id="_1、索引"><a href="#_1、索引" class="header-anchor">#</a> 1、索引</h3> <p>倒排索引用于搜索，正排索引用来排序分组聚合</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>doc1: {&quot;name&quot;: &quot;t01&quot;, “age”: 1, &quot;content&quot;: &quot;hello you as fdg&quot;}
+doc2: {&quot;name&quot;: &quot;t02&quot;, &quot;age&quot;: 2, content&quot;: &quot;hello asd s world&quot;}
+
+搜索请求: hello world
+
+倒排索引
+				doc1	doc2
+hello  	1			1
+you
+as
+fdg
+asd 
+s
+world					1
+搜索结果 doc1,doc2，且doc2的相关度评分更高
+
+正排索引
+	document 	name		age 	content
+	doc1			test01	1			hello you as fdg
+	doc2			test02	2			hello asd s world
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h2 id="_6、scroll-滚动搜索"><a href="#_6、scroll-滚动搜索" class="header-anchor">#</a> 6、scroll 滚动搜索</h2> <ul><li>看起来像分页，分页是一页一页搜索，返回给用户看的</li> <li>scroll主要是用来一批一批检索数据，让系统进行处理的，第一次新建scroll，下一次只需要拿到scroll_id即可，滚动查询了，不需要在写查询条件，他是会在设置的超时时间内有效</li></ul> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token constant">GET</span> <span class="token operator">/</span>mall<span class="token operator">/</span>product<span class="token operator">/</span>_search<span class="token operator">?</span>scroll<span class="token operator">=</span>1m
+<span class="token punctuation">{</span>
+  <span class="token string-property property">&quot;query&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">&quot;match_all&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string-property property">&quot;sort&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token string-property property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string-property property">&quot;order&quot;</span><span class="token operator">:</span> <span class="token string">&quot;desc&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span> 
+  <span class="token string-property property">&quot;size&quot;</span><span class="token operator">:</span> <span class="token number">2</span>
+<span class="token punctuation">}</span>
+
+<span class="token constant">GET</span> <span class="token operator">/</span>_search<span class="token operator">/</span>scroll
+<span class="token punctuation">{</span>
+  <span class="token string-property property">&quot;scroll&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1m&quot;</span><span class="token punctuation">,</span>
+  <span class="token string-property property">&quot;scroll_id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;上一步返回的_scroll_id值&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h2 id="_7、索引维护"><a href="#_7、索引维护" class="header-anchor">#</a> 7、索引维护</h2> <p>可以对索引的分片副本进行设置，注意，索引一旦创建number_of_shards不能改，number_of_replicas还能改</p> <h3 id="_1、创建索引"><a href="#_1、创建索引" class="header-anchor">#</a> 1、创建索引</h3> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token constant">PUT</span> <span class="token operator">/</span>my_index
+<span class="token punctuation">{</span>
+  <span class="token string-property property">&quot;settings&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">&quot;number_of_shards&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token string-property property">&quot;number_of_replicas&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string-property property">&quot;mappings&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">&quot;my_type&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string-property property">&quot;properties&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string-property property">&quot;field01&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token string-property property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;text&quot;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h3 id="_2、修改"><a href="#_2、修改" class="header-anchor">#</a> 2、修改</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>PUT /my_index/_settings
+{
+  &quot;number_of_replicas&quot;: 1
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="_3、删除"><a href="#_3、删除" class="header-anchor">#</a> 3、删除</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>DELETE /my_index
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="_8、应用零停机-重建索引"><a href="#_8、应用零停机-重建索引" class="header-anchor">#</a> 8、应用零停机，重建索引</h2> <h3 id="_1、为什么要重建索引"><a href="#_1、为什么要重建索引" class="header-anchor">#</a> 1、为什么要重建索引？</h3> <ol><li><p>概述：</p> <p>​	因为index一旦建立，已有的field是不能被修改的，可以添加新的field，添加的话，停机后在开发才有意义</p></li> <li><p>为什么index不可变？(一下很多不是很理解)</p> <ol><li><p>倒排索引是适用于进行搜索的</p></li> <li><p>倒排索引的结构</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>descript		doc1		doc2
+qwe					1				1
+asd					1		
+zxc									1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ul><li>包含这个关键词的document list</li> <li>包含这个关键词的所有的document的数量IDF</li> <li>这个关键词在每个document中出现的次数IF</li> <li>这个关键词在这个document中的次序</li> <li>每个document的长度</li> <li>包含这个关键词的所有document的平均长度</li></ul></li> <li><p>倒排索引不可变的好处</p> <ul><li>不需要锁，提升并发能力，避免锁的问题</li> <li>数据不变，一只保存在os cache中，只要cache内存足够</li> <li>filter cache一只在内存中，因为数据不变</li> <li>可以压缩，节省cpu和io开销</li></ul></li> <li><p>坏处</p> <ul><li>每次都要重新构建索引</li></ul></li></ol></li></ol> <h3 id="_2、是什么引起-需要重建索引"><a href="#_2、是什么引起-需要重建索引" class="header-anchor">#</a> 2、是什么引起，需要重建索引</h3> <ol><li><p>业务变化，需要对某些field做一些更新</p></li> <li><p>数据初始化的时候，由于数据问题，倒是索引mapping不对</p> <ul><li><p>在index还未建立的时候，希望通过 dynamic mapping来建立索引存储数据的情况(没有预先建立索引的mapping，而是等待，传入的第一条数据，自动解析数据类型建立mapping)。例如，title，预期是text，但是在初始化的时候，传进来了“2020-04-16”，此时title字段类型是date，以后传入普通文本的时候，就会报错，类型不对</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token constant">GET</span> <span class="token operator">/</span>my_index<span class="token operator">/</span>my_type<span class="token operator">/</span><span class="token number">1</span>
+
+<span class="token constant">GET</span> <span class="token operator">/</span>my_index<span class="token operator">/</span>_mapping
+
+<span class="token comment">//type date</span>
+<span class="token constant">PUT</span> <span class="token operator">/</span>my_index<span class="token operator">/</span>my_type<span class="token operator">/</span><span class="token number">1</span>
+<span class="token punctuation">{</span>
+  <span class="token string-property property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-04-16&quot;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//报错：类型不匹配</span>
+<span class="token constant">PUT</span> <span class="token operator">/</span>my_index<span class="token operator">/</span>my_type<span class="token operator">/</span><span class="token number">2</span>
+<span class="token punctuation">{</span>
+  <span class="token string-property property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;dqw&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div></li></ul></li></ol> <h3 id="_3、如何解决-实现应用的零停机"><a href="#_3、如何解决-实现应用的零停机" class="header-anchor">#</a> 3、如何解决？实现应用的零停机？</h3> <ol><li><p>解决思路：</p> <p>​	reindex，重新建立索引，将旧索引的数据查询出来，在导入到新索引中</p></li> <li><p>步骤：</p> <p>​	给每个index起一个别名，java应用查询的时候，使用别名索引，这样就能够临时建立一个新的索引，把旧索引数据导入到新索引中，新索引别名与java应用使用的一致即可</p> <p>​	注意，根据别名索引查询的时候，需关注返回结果_index字段，若这个别名是多个索引的映射，查询结果 _index是不同的，数据是他对应的所有索引的。</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token comment">//先查询旧索引mapping</span>
+<span class="token constant">GET</span> <span class="token operator">/</span>my_index<span class="token operator">/</span>_mapping
+
+<span class="token comment">//给索引起别名，java应用应该始终使用这个别名查询</span>
+<span class="token constant">PUT</span> <span class="token operator">/</span>my_index<span class="token operator">/</span>_alias<span class="token operator">/</span>lu_index
+
+<span class="token comment">//查询别名对应的索引，以此来锁定关系，排错</span>
+<span class="token constant">GET</span> <span class="token operator">/</span>lu_index<span class="token operator">/</span>_alias
+
+<span class="token comment">//建立新的索引</span>
+<span class="token constant">PUT</span> <span class="token operator">/</span>my_index_new
+<span class="token punctuation">{</span>
+  <span class="token string-property property">&quot;mappings&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">&quot;my_type&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string-property property">&quot;properties&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string-property property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token string-property property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;text&quot;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//查询旧索引的数据，scroll 滚动查询配合bulk，是比较提倡的，既好控制bulk数量过大，也采用了批处理提高执行效率</span>
+<span class="token constant">GET</span> <span class="token operator">/</span>my_index<span class="token operator">/</span>_search<span class="token operator">?</span>scroll<span class="token operator">=</span>1m
+<span class="token punctuation">{</span>
+  <span class="token string-property property">&quot;query&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">&quot;match_all&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string-property property">&quot;sort&quot;</span><span class="token operator">:</span> <span class="token string">&quot;_doc&quot;</span><span class="token punctuation">,</span>
+  <span class="token string-property property">&quot;size&quot;</span><span class="token operator">:</span> <span class="token number">1</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//封装数据，批量更新到新索引中</span>
+<span class="token constant">GET</span> <span class="token operator">/</span>_search<span class="token operator">/</span>scroll
+<span class="token punctuation">{</span>
+  <span class="token string-property property">&quot;scroll&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1m&quot;</span><span class="token punctuation">,</span>
+  <span class="token string-property property">&quot;scroll_id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;上面返回的_scroll_id&quot;</span>
+<span class="token punctuation">}</span>
+<span class="token constant">POST</span> <span class="token operator">/</span>_bulk
+<span class="token punctuation">{</span><span class="token string-property property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token string-property property">&quot;_index&quot;</span><span class="token operator">:</span> <span class="token string">&quot;my_index_new&quot;</span><span class="token punctuation">,</span> <span class="token string-property property">&quot;_type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;my_type&quot;</span><span class="token punctuation">,</span> <span class="token string-property property">&quot;_id&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token string-property property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-04-16&quot;</span><span class="token punctuation">}</span>
+
+<span class="token comment">//更新别名，移除旧索引的别名映射，改为新索引的别名</span>
+<span class="token constant">POST</span> <span class="token operator">/</span>_aliases
+<span class="token punctuation">{</span>
+  <span class="token string-property property">&quot;actions&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token string-property property">&quot;remove&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string-property property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token string">&quot;my_index&quot;</span><span class="token punctuation">,</span>
+        <span class="token string-property property">&quot;alias&quot;</span><span class="token operator">:</span> <span class="token string">&quot;lu_index&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+     <span class="token punctuation">{</span>
+      <span class="token string-property property">&quot;add&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string-property property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token string">&quot;my_index_new&quot;</span><span class="token punctuation">,</span>
+        <span class="token string-property property">&quot;alias&quot;</span><span class="token operator">:</span> <span class="token string">&quot;lu_index&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br></div></div></li></ol> <h1 id="三、问题"><a href="#三、问题" class="header-anchor">#</a> 三、问题</h1> <h2 id="_1、bouncing-results"><a href="#_1、bouncing-results" class="header-anchor">#</a> 1、bouncing results</h2> <ol><li><p>问题描述：</p> <ul><li><p>回顾es查询过程：</p> <p>​	客户端随机发送查询请求给一个node，node ha sh，routing之后，打到另一台node，该node就是本次查询的协调节点，协调节点，会根据查询条件，去每个primary shard获取数据(当然，如果开启了replica shard 则每个primary shard与之对应的replica shard 之间会采用轮训算法，来处理请求)，最后由协调节点merge，进一步算分、排序、集合...</p></li> <li><p>问题解释：</p> <p>​	这过程，会出现 bouncing results问题，即，查询结果跳跃，即相同的查询条件，每次查询出来的结果不同</p></li> <li><p>问题原因：</p> <ul><li>原因一：es每次查询，是按照负载均衡轮训算法，从不同replica shard获取数据的，在高并发实时写入数据的场景下，不能保证同一时刻每一个replica shard数据都是一致的，这个原因官方没有明确指出，单纯是个人理解</li> <li>原因二：由于es写的时候，对于replica shard同步之间是并行的，每个请求之间是无序的，故很容易产生，timestamp一样，且顺序不同的文档数据，在各个replica shard，当客户端采用timestamp排序时，由于每次请求达到的shard不同(由于轮训算法)，所以每次结果的顺序不同，协调节点merge结果自然也不同</li></ul></li></ul></li> <li><p>问题解决</p> <ul><li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-request-preference.html" target="_blank" rel="noopener noreferrer">参考官方文档<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>​	解决思路，实际上就是，查询的时候，确定分片副本查询即可，所以需要设置preference。但是这样的话，单台服务器节点压力会加重，所以还需要切合业务场景去尝试，靠经验</p></li></ul></li></ol></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">9/21/2023, 7:24:27 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/lustack.github.io/assets/js/app.66f88025.js" defer></script><script src="/lustack.github.io/assets/js/2.be206077.js" defer></script><script src="/lustack.github.io/assets/js/6.fe70bd28.js" defer></script>
+  </body>
+</html>

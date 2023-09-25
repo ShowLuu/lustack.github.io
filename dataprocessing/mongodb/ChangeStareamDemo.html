@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>一、ChangeStaream | lustack 知识星球</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    
+    <meta name="description" content="沉淀、分享、成长">
+    
+    <link rel="preload" href="/lustack.github.io/assets/css/0.styles.cd78999c.css" as="style"><link rel="preload" href="/lustack.github.io/assets/js/app.66f88025.js" as="script"><link rel="preload" href="/lustack.github.io/assets/js/2.be206077.js" as="script"><link rel="preload" href="/lustack.github.io/assets/js/17.f0cb870f.js" as="script"><link rel="prefetch" href="/lustack.github.io/assets/js/10.10d7d04b.js"><link rel="prefetch" href="/lustack.github.io/assets/js/11.487a6640.js"><link rel="prefetch" href="/lustack.github.io/assets/js/12.8d03ef92.js"><link rel="prefetch" href="/lustack.github.io/assets/js/13.1cade734.js"><link rel="prefetch" href="/lustack.github.io/assets/js/14.e452857b.js"><link rel="prefetch" href="/lustack.github.io/assets/js/15.30ecd203.js"><link rel="prefetch" href="/lustack.github.io/assets/js/16.8d1be629.js"><link rel="prefetch" href="/lustack.github.io/assets/js/18.cf840a09.js"><link rel="prefetch" href="/lustack.github.io/assets/js/19.cd52d169.js"><link rel="prefetch" href="/lustack.github.io/assets/js/20.987b23a0.js"><link rel="prefetch" href="/lustack.github.io/assets/js/21.390f06a0.js"><link rel="prefetch" href="/lustack.github.io/assets/js/22.a8716fe4.js"><link rel="prefetch" href="/lustack.github.io/assets/js/23.dbc1e4be.js"><link rel="prefetch" href="/lustack.github.io/assets/js/3.6b3e1575.js"><link rel="prefetch" href="/lustack.github.io/assets/js/4.032b12d5.js"><link rel="prefetch" href="/lustack.github.io/assets/js/5.9d5a42da.js"><link rel="prefetch" href="/lustack.github.io/assets/js/6.fe70bd28.js"><link rel="prefetch" href="/lustack.github.io/assets/js/7.0a429ad2.js"><link rel="prefetch" href="/lustack.github.io/assets/js/8.ba983ee5.js"><link rel="prefetch" href="/lustack.github.io/assets/js/9.7bc7b9b9.js">
+    <link rel="stylesheet" href="/lustack.github.io/assets/css/0.styles.cd78999c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/lustack.github.io/" class="home-link router-link-active"><img src="/lustack.github.io/assets/img/logo.jpg" alt="lustack 知识星球" class="logo"> <span class="site-name can-hide">lustack 知识星球</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="项目管理" class="dropdown-title"><span class="title">项目管理</span> <span class="arrow down"></span></button> <button type="button" aria-label="项目管理" class="mobile-dropdown-title"><span class="title">项目管理</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          版本控制工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/pm/git/Gitee.html" class="nav-link">
+  Git第一章
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="操作系统" class="dropdown-title"><span class="title">操作系统</span> <span class="arrow down"></span></button> <button type="button" aria-label="操作系统" class="mobile-dropdown-title"><span class="title">操作系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Linux基本操作
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/opsystem/linux/01/01.html" class="nav-link">
+  第一章
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/opsystem/linux/02.html" class="nav-link">
+  第二章
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/opsystem/linux/shell/01.html" class="nav-link">
+  第三章
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Netty" class="dropdown-title"><span class="title">Netty</span> <span class="arrow down"></span></button> <button type="button" aria-label="Netty" class="mobile-dropdown-title"><span class="title">Netty</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/lustack.github.io/netty/Netty学习笔记.html" class="nav-link">
+  基础篇(一)
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java基础" class="dropdown-title"><span class="title">Java基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java基础" class="mobile-dropdown-title"><span class="title">Java基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          设计模式
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/java/设计模式/重学设计模式.html" class="nav-link">
+  重学设计模式
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="消息队列" class="dropdown-title"><span class="title">消息队列</span> <span class="arrow down"></span></button> <button type="button" aria-label="消息队列" class="mobile-dropdown-title"><span class="title">消息队列</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          kafka
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/messagequeue/kafka/基础学习篇/基础学习篇.html" class="nav-link">
+  基础篇
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/messagequeue/kafka/基础学习篇/深入理解kafka核心设计与实践原理.html" class="nav-link">
+  深入理解kafka核心设计与实践原理
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          elasticsearch
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/elasticsearch/Logstash.html" class="nav-link">
+  elk
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/elasticsearch/base01.html" class="nav-link">
+  基础篇(一)
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html" class="nav-link">
+  基础篇(二)
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/elasticsearch/skill01.html" class="nav-link">
+  碎片篇(一)
+</a></li></ul></li><li class="dropdown-item"><h4>
+          mongodb
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/mongodb/ChangeStareamDemo.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  ChangeStream.1
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/mongodb/MongodbChangeStareamDemo.html" class="nav-link">
+  ChangeStream.2
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="表单工作流" class="dropdown-title"><span class="title">表单工作流</span> <span class="arrow down"></span></button> <button type="button" aria-label="表单工作流" class="mobile-dropdown-title"><span class="title">表单工作流</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          轻量级turbo
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/formworkflow/turbo/think.html" class="nav-link">
+  推荐
+</a></li></ul></li><li class="dropdown-item"><h4>
+          flowable
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/formworkflow/yudao/think.html" class="nav-link">
+  芋道源码
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/ShowLuu/lu-stack-maven-repository" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  组件私服
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://gitee.com/Showluu" target="_blank" rel="noopener noreferrer" class="repo-link">
+    源码仓库
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="项目管理" class="dropdown-title"><span class="title">项目管理</span> <span class="arrow down"></span></button> <button type="button" aria-label="项目管理" class="mobile-dropdown-title"><span class="title">项目管理</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          版本控制工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/pm/git/Gitee.html" class="nav-link">
+  Git第一章
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="操作系统" class="dropdown-title"><span class="title">操作系统</span> <span class="arrow down"></span></button> <button type="button" aria-label="操作系统" class="mobile-dropdown-title"><span class="title">操作系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Linux基本操作
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/opsystem/linux/01/01.html" class="nav-link">
+  第一章
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/opsystem/linux/02.html" class="nav-link">
+  第二章
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/opsystem/linux/shell/01.html" class="nav-link">
+  第三章
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Netty" class="dropdown-title"><span class="title">Netty</span> <span class="arrow down"></span></button> <button type="button" aria-label="Netty" class="mobile-dropdown-title"><span class="title">Netty</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/lustack.github.io/netty/Netty学习笔记.html" class="nav-link">
+  基础篇(一)
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java基础" class="dropdown-title"><span class="title">Java基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java基础" class="mobile-dropdown-title"><span class="title">Java基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          设计模式
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/java/设计模式/重学设计模式.html" class="nav-link">
+  重学设计模式
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="消息队列" class="dropdown-title"><span class="title">消息队列</span> <span class="arrow down"></span></button> <button type="button" aria-label="消息队列" class="mobile-dropdown-title"><span class="title">消息队列</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          kafka
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/messagequeue/kafka/基础学习篇/基础学习篇.html" class="nav-link">
+  基础篇
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/messagequeue/kafka/基础学习篇/深入理解kafka核心设计与实践原理.html" class="nav-link">
+  深入理解kafka核心设计与实践原理
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          elasticsearch
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/elasticsearch/Logstash.html" class="nav-link">
+  elk
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/elasticsearch/base01.html" class="nav-link">
+  基础篇(一)
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/elasticsearch/base02.html" class="nav-link">
+  基础篇(二)
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/elasticsearch/skill01.html" class="nav-link">
+  碎片篇(一)
+</a></li></ul></li><li class="dropdown-item"><h4>
+          mongodb
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/mongodb/ChangeStareamDemo.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  ChangeStream.1
+</a></li><li class="dropdown-subitem"><a href="/lustack.github.io/dataprocessing/mongodb/MongodbChangeStareamDemo.html" class="nav-link">
+  ChangeStream.2
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="表单工作流" class="dropdown-title"><span class="title">表单工作流</span> <span class="arrow down"></span></button> <button type="button" aria-label="表单工作流" class="mobile-dropdown-title"><span class="title">表单工作流</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          轻量级turbo
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/formworkflow/turbo/think.html" class="nav-link">
+  推荐
+</a></li></ul></li><li class="dropdown-item"><h4>
+          flowable
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/lustack.github.io/formworkflow/yudao/think.html" class="nav-link">
+  芋道源码
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/ShowLuu/lu-stack-maven-repository" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  组件私服
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://gitee.com/Showluu" target="_blank" rel="noopener noreferrer" class="repo-link">
+    源码仓库
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>一、ChangeStaream</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/lustack.github.io/dataprocessing/mongodb/ChangeStareamDemo.html#_1、安装" class="sidebar-link">1、安装</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/lustack.github.io/dataprocessing/mongodb/ChangeStareamDemo.html#_2、基本操作" class="sidebar-link">2、基本操作</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/lustack.github.io/dataprocessing/mongodb/ChangeStareamDemo.html#_3、配置集群启动" class="sidebar-link">3、配置集群启动</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/lustack.github.io/dataprocessing/mongodb/ChangeStareamDemo.html#_4、用户密码验证" class="sidebar-link">4、用户密码验证</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/lustack.github.io/dataprocessing/mongodb/ChangeStareamDemo.html#_1-单机情况有用" class="sidebar-link">1.单机情况有用</a></li><li class="sidebar-sub-header"><a href="/lustack.github.io/dataprocessing/mongodb/ChangeStareamDemo.html#_2-集群模式有用" class="sidebar-link">2.集群模式有用</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="一、changestaream"><a href="#一、changestaream" class="header-anchor">#</a> 一、ChangeStaream</h1> <ul><li>先搭建集群，该操作需要集群环境，主通知从等... https://blog.csdn.net/zhangcongyi420/article/details/92738646</li> <li>shell体验：https://cloud.tencent.com/developer/article/1711794</li> <li>代码案例：https://blog.csdn.net/qq_35561207/article/details/85201501</li></ul> <h2 id="_1、安装"><a href="#_1、安装" class="header-anchor">#</a> 1、安装</h2> <ul><li><p>官网下载文件</p></li> <li><p>解压，配置etc，mongoldb.conf文件</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token assign-left variable">dbpath</span><span class="token operator">=</span>/Users/zhanglu/Desktop/lu/tool/dev/mongodb/4.0.10/data/db/
+<span class="token assign-left variable">logpath</span><span class="token operator">=</span>/Users/zhanglu/Desktop/lu/tool/dev/mongodb/4.0.10/log/mongod.log
+logappend <span class="token operator">=</span> <span class="token boolean">true</span>
+<span class="token assign-left variable">bind_ip</span><span class="token operator">=</span><span class="token number">127.0</span>.0.1
+port <span class="token operator">=</span> <span class="token number">27017</span>
+fork <span class="token operator">=</span> <span class="token boolean">true</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div></li> <li><p>基本命令</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>启动：./bin/mongod <span class="token parameter variable">-f</span> ./etc/mongod.conf 
+客户端连接：./bin/mongo <span class="token number">127.0</span>.0.1:27017/lu
+退出：ps -ef<span class="token operator">|</span><span class="token function">grep</span> mongod 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></li></ul> <h2 id="_2、基本操作"><a href="#_2、基本操作" class="header-anchor">#</a> 2、基本操作</h2> <h6 id="自行百度-菜鸟教程够用了"><a href="#自行百度-菜鸟教程够用了" class="header-anchor">#</a> 自行百度，菜鸟教程够用了</h6> <p>https://www.runoob.com/mongodb/mongodb-remove.html</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>查：db.col.find<span class="token punctuation">(</span><span class="token punctuation">)</span>.pretty<span class="token punctuation">(</span><span class="token punctuation">)</span>
+增：db.col.insert<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&quot;name&quot;</span><span class="token builtin class-name">:</span><span class="token string">&quot;测试01&quot;</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+改：db.col.update<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&quot;name&quot;</span><span class="token builtin class-name">:</span><span class="token string">&quot;测试01&quot;</span><span class="token punctuation">}</span>,<span class="token punctuation">{</span><span class="token variable">$set</span>:<span class="token punctuation">{</span><span class="token string">&quot;name&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;测试02&quot;</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+删：db.col.remove<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&quot;name&quot;</span> <span class="token builtin class-name">:</span> <span class="token string">&quot;测试02&quot;</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="_3、配置集群启动"><a href="#_3、配置集群启动" class="header-anchor">#</a> 3、配置集群启动</h2> <ul><li><p>配置文件</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>主：
+storage:
+  journal:
+    enabled: <span class="token boolean">true</span>
+  dbPath: <span class="token string">&quot;/Users/zhanglu/Desktop/lu/tool/dev/mongodb/mongodb-macos-x86_64-4.4.3/data/db/&quot;</span>
+systemLog:
+  destination: <span class="token function">file</span>
+  path: <span class="token string">&quot;/Users/zhanglu/Desktop/lu/tool/dev/mongodb/mongodb-macos-x86_64-4.4.3/log/mongod.log&quot;</span>
+  logAppend: <span class="token boolean">true</span>
+net:
+  bindIp: <span class="token string">&quot;0.0.0.0&quot;</span>
+  port: <span class="token number">27017</span>
+replication:
+  replSetName: <span class="token string">&quot;lu&quot;</span>
+security:
+  authorization: enabled
+  keyFile: <span class="token string">&quot;/Users/zhanglu/Desktop/lu/tool/dev/mongodb/mongodb-macos-x86_64-4.4.3/keyfile&quot;</span>
+
+从1：
+storage:
+  journal:
+    enabled: <span class="token boolean">true</span>
+  dbPath: <span class="token string">&quot;/Users/zhanglu/Desktop/lu/tool/dev/mongodb/mongodb-macos-x86_64-4.4.3/data/db_s1/&quot;</span>
+systemLog:
+  destination: <span class="token function">file</span>
+  path: <span class="token string">&quot;/Users/zhanglu/Desktop/lu/tool/dev/mongodb/mongodb-macos-x86_64-4.4.3/log/s1.log&quot;</span>
+  logAppend: <span class="token boolean">true</span>
+net:
+  bindIp: <span class="token string">&quot;0.0.0.0&quot;</span>
+  port: <span class="token number">27018</span>
+replication:
+  replSetName: <span class="token string">&quot;lu&quot;</span>
+security:
+  authorization: enabled
+  keyFile: <span class="token string">&quot;/Users/zhanglu/Desktop/lu/tool/dev/mongodb/mongodb-macos-x86_64-4.4.3/keyfile&quot;</span>
+
+从2：
+storage:
+  journal:
+    enabled: <span class="token boolean">true</span>
+  dbPath: <span class="token string">&quot;/Users/zhanglu/Desktop/lu/tool/dev/mongodb/mongodb-macos-x86_64-4.4.3/data/db_s2/&quot;</span>
+systemLog:
+  destination: <span class="token function">file</span>
+  path: <span class="token string">&quot;/Users/zhanglu/Desktop/lu/tool/dev/mongodb/mongodb-macos-x86_64-4.4.3/log/s2.log&quot;</span>
+  logAppend: <span class="token boolean">true</span>
+net:
+  bindIp: <span class="token string">&quot;0.0.0.0&quot;</span>
+  port: <span class="token number">27019</span>
+replication:
+  replSetName: <span class="token string">&quot;lu&quot;</span>
+security:
+  authorization: enabled
+  keyFile: <span class="token string">&quot;/Users/zhanglu/Desktop/lu/tool/dev/mongodb/mongodb-macos-x86_64-4.4.3/keyfile&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br></div></div></li> <li><p>启动</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>./bin/mongod <span class="token parameter variable">-f</span> ./etc/mongod.conf 
+./bin/mongod <span class="token parameter variable">-f</span> ./etc/s1.conf 
+./bin/mongod <span class="token parameter variable">-f</span> ./etc/s2.conf 
+
+客户端连接集群：
+./bin/mongo <span class="token number">127.0</span>.0.1:27017/lu
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div></li> <li><p>配置集群</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>步骤一：
+use lu
+
+
+步骤二：
+<span class="token assign-left variable">cfg</span><span class="token operator">=</span><span class="token punctuation">{</span>_id:<span class="token string">&quot;lu&quot;</span>,members:<span class="token punctuation">[</span><span class="token punctuation">{</span>_id:0,host:<span class="token string">'127.0.0.1:27017'</span>,priority:2<span class="token punctuation">}</span>,<span class="token punctuation">{</span>_id:1,host:<span class="token string">'127.0.0.1:27018'</span>,priority:1<span class="token punctuation">}</span>,<span class="token punctuation">{</span>_id:2,host:<span class="token string">'127.0.0.1:27019'</span>,arbiterOnly:true<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">}</span>
+
+步骤三：
+rs.initiate<span class="token punctuation">(</span>cfg<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div></li> <li><p>测试</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>一个客户端开启监视器：db.watch<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span>,<span class="token punctuation">{</span>maxAwaitTimeMS:60000<span class="token punctuation">}</span><span class="token punctuation">)</span>
+一个客户端对选择的database进行操作，观察日志输出
+db.col.insert<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&quot;name&quot;</span><span class="token builtin class-name">:</span><span class="token string">&quot;测试01&quot;</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+db.col.update<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&quot;name&quot;</span><span class="token builtin class-name">:</span><span class="token string">&quot;测试01&quot;</span><span class="token punctuation">}</span>,<span class="token punctuation">{</span><span class="token variable">$set</span>:<span class="token punctuation">{</span><span class="token string">&quot;name&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;测试02&quot;</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+db.col.remove<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&quot;name&quot;</span> <span class="token builtin class-name">:</span> <span class="token string">&quot;测试02&quot;</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></li></ul> <h2 id="_4、用户密码验证"><a href="#_4、用户密码验证" class="header-anchor">#</a> 4、用户密码验证</h2> <h3 id="_1-单机情况有用"><a href="#_1-单机情况有用" class="header-anchor">#</a> 1.单机情况有用</h3> <p>https://docs.mongodb.com/manual/tutorial/enable-authentication/</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>创建管理员
+db.createUser<span class="token punctuation">(</span>
+  <span class="token punctuation">{</span>
+    user: <span class="token string">&quot;root&quot;</span>,
+    pwd: <span class="token string">&quot;111111&quot;</span>,
+    roles: <span class="token punctuation">[</span> <span class="token punctuation">{</span> role: <span class="token string">&quot;userAdminAnyDatabase&quot;</span>, db: <span class="token string">&quot;admin&quot;</span> <span class="token punctuation">}</span>, <span class="token string">&quot;readWriteAnyDatabase&quot;</span> <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+
+db.createUser<span class="token punctuation">(</span>
+  <span class="token punctuation">{</span>
+    user: <span class="token string">&quot;root&quot;</span>,
+    pwd: passwordPrompt<span class="token punctuation">(</span><span class="token punctuation">)</span>,
+    roles: <span class="token punctuation">[</span> <span class="token punctuation">{</span> role: <span class="token string">&quot;userAdminAnyDatabase&quot;</span>, db: <span class="token string">&quot;admin&quot;</span> <span class="token punctuation">}</span>, <span class="token string">&quot;readWriteAnyDatabase&quot;</span> <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+
+查看创建的管理员账号
+db.getUser<span class="token punctuation">(</span><span class="token string">&quot;root&quot;</span><span class="token punctuation">)</span>
+
+重启mongodb集群
+
+客户端连接：mongo <span class="token parameter variable">--host</span> <span class="token number">127.0</span>.0.1 <span class="token parameter variable">--port</span> <span class="token number">27017</span> <span class="token parameter variable">-u</span> <span class="token string">&quot;root&quot;</span> -p<span class="token string">'Showlu18'</span> <span class="token parameter variable">--authenticationDatabase</span> <span class="token string">&quot;admin&quot;</span>
+客户端连接：
+	mongo <span class="token parameter variable">--host</span> <span class="token number">127.0</span>.0.1  
+	use admin  
+	db.auth<span class="token punctuation">(</span><span class="token string">&quot;root&quot;</span>, <span class="token string">&quot;111111&quot;</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div><div class="language-shell line-numbers-mode"><pre class="language-shell"><code>创建普通用户<span class="token punctuation">(</span>权限：读写数据库lu， 只读数据库admin<span class="token punctuation">)</span>
+use lu
+db.createUser<span class="token punctuation">(</span>
+  <span class="token punctuation">{</span>
+    user: <span class="token string">&quot;lu&quot;</span>,
+    pwd: <span class="token string">&quot;111111&quot;</span>,
+    roles: <span class="token punctuation">[</span> <span class="token punctuation">{</span> role: <span class="token string">&quot;readWrite&quot;</span>, db: <span class="token string">&quot;lu&quot;</span> <span class="token punctuation">}</span>,
+             <span class="token punctuation">{</span> role: <span class="token string">&quot;read&quot;</span>, db: <span class="token string">&quot;test&quot;</span> <span class="token punctuation">}</span> <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h3 id="_2-集群模式有用"><a href="#_2-集群模式有用" class="header-anchor">#</a> 2.集群模式有用</h3> <p>https://www.cnblogs.com/woxingwoxue/p/9888897.html</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>use admin
+db.createUser({user: &quot;root&quot;,pwd: &quot;Showlu18&quot;,roles: [ { role: &quot;root&quot;, db: &quot;admin&quot; } ]})
+db.auth(&quot;root&quot;, &quot;Showlu18&quot;)
+
+use config
+db.createUser({user: &quot;root&quot;,pwd: &quot;Showlu18&quot;,roles: [ { role: &quot;root&quot;, db: &quot;admin&quot; } ]})
+db.auth(&quot;root&quot;, &quot;Showlu18&quot;)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">1/29/2023, 2:28:25 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/lustack.github.io/assets/js/app.66f88025.js" defer></script><script src="/lustack.github.io/assets/js/2.be206077.js" defer></script><script src="/lustack.github.io/assets/js/17.f0cb870f.js" defer></script>
+  </body>
+</html>
