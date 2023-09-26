@@ -1,5 +1,6 @@
 ---
 #参考：https://vuepress-theme-hope.gitee.io/v2/zh/config/frontmatter/blog-home.html
+#hero: https://vitepress.dev/reference/default-theme-home-page
 home: true
 hero: true
 title: lustack 知识星球

@@ -63,6 +63,10 @@ module.exports = {
                     {text: '轻量级turbo', items: [{text: '推荐', link: '/formworkflow/turbo/think.md'}]},
                     {text: 'flowable', items: [{text: '芋道源码', link: '/formworkflow/yudao/think.md'}]}
                 ]
+            },
+            {
+                text: '组件私服',
+                link: 'https://github.com/ShowLuu/lu-stack-maven-repository'
             }
         ],
         // 自动形成侧边导航
